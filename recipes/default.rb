@@ -42,7 +42,7 @@ git "#{node['kibana']['installdir']}/#{node['kibana']['branch']}" do
   repository node['kibana']['repo']
   reference node['kibana']['branch']
   action :sync
-  user kibana_user
+  user   'root'
 end
 
 link "#{node['kibana']['installdir']}/current" do
